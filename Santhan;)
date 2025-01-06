@@ -1,0 +1,385 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "844753c1-6436-489c-a50b-8387195f259d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'x': 1, 'y': 2, 'z': 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d1={\"x\":1,\"y\":2,\"z\":3}\n",
+    "print(d1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "c49ba3c5-14ad-4b22-8a54-735a3a001ca5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'A': 10, 'B': 20, 'C': 30}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d2=dict(A=10,B=20,C=30)\n",
+    "print(d2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "4a9fb5e6-4e10-47fe-9820-8e92252775a6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'x': 1, 'y': 2, 'z': 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "d3=dict([(\"x\",1),(\"y\",2),(\"z\",3)])\n",
+    "print(d3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "2d75fe16-3bd4-4259-88de-dca087ecbcc9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict_keys(['A', 'B', 'C'])\n",
+      "dict_values([10, 20, 30])\n",
+      "dict_items([('A', 10), ('B', 20), ('C', 30)])\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(d2.keys())\n",
+    "print(d2.values())\n",
+    "print(d2.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "27e4e4b5-b3f3-4485-a289-7bc8d5c9dedf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dict_keys(['x', 'y', 'z'])\n",
+      "dict_values([1, 2, 3])\n",
+      "dict_items([('x', 1), ('y', 2), ('z', 3)])\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(d3.keys())\n",
+    "print(d3.values())\n",
+    "print(d3.items())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "0fb88bd0-a34b-43cd-be85-f8e26142fa1e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'Virat': 200, 'rohit': 100, 'Gill': 110, 'Hardik': 55, 'Yuvi': 10, 'DSP': 100}\n"
+     ]
+    }
+   ],
+   "source": [
+    "scores={\"Virat\":200,\n",
+    "        \"rohit\":100,\n",
+    "        \"Gill\":110,\n",
+    "        \"Hardik\":55,\n",
+    "        \"Yuvi\":10,\n",
+    "        \"DSP\":100}\n",
+    "print(scores)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "bf2f598c-a3ce-42b1-8b9a-8dc687a59325",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Virat': 200, 'rohit': 100, 'Gill': 110, 'Hardik': 55, 'Yuvi': 40, 'DSP': 100}"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.update({\"Yuvi\":40})\n",
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "65cdeccf-8efe-4a63-aa38-d944989b5db5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Virat': 250, 'rohit': 100, 'Gill': 100, 'Hardik': 55, 'Yuvi': 40, 'DSP': 100}"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.update({\"Gill\":100, \"Virat\":250})\n",
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "60f58537-8d22-44b1-a0fc-63f75da14685",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['__class__',\n",
+       " '__class_getitem__',\n",
+       " '__contains__',\n",
+       " '__delattr__',\n",
+       " '__delitem__',\n",
+       " '__dir__',\n",
+       " '__doc__',\n",
+       " '__eq__',\n",
+       " '__format__',\n",
+       " '__ge__',\n",
+       " '__getattribute__',\n",
+       " '__getitem__',\n",
+       " '__getstate__',\n",
+       " '__gt__',\n",
+       " '__hash__',\n",
+       " '__init__',\n",
+       " '__init_subclass__',\n",
+       " '__ior__',\n",
+       " '__iter__',\n",
+       " '__le__',\n",
+       " '__len__',\n",
+       " '__lt__',\n",
+       " '__ne__',\n",
+       " '__new__',\n",
+       " '__or__',\n",
+       " '__reduce__',\n",
+       " '__reduce_ex__',\n",
+       " '__repr__',\n",
+       " '__reversed__',\n",
+       " '__ror__',\n",
+       " '__setattr__',\n",
+       " '__setitem__',\n",
+       " '__sizeof__',\n",
+       " '__str__',\n",
+       " '__subclasshook__',\n",
+       " 'clear',\n",
+       " 'copy',\n",
+       " 'fromkeys',\n",
+       " 'get',\n",
+       " 'items',\n",
+       " 'keys',\n",
+       " 'pop',\n",
+       " 'popitem',\n",
+       " 'setdefault',\n",
+       " 'update',\n",
+       " 'values']"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dir(dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "95170be3-d7c0-480b-a675-8e4ebdc0b447",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Virat': 250, 'rohit': 100, 'Gill': 100, 'Hardik': 55, 'Yuvi': 40, 'DSP': 100}"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.setdefault(\"Yuvi\",76)\n",
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "78acd144-3ddf-4b49-ab0c-58a7d97cf501",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Virat': 250,\n",
+       " 'rohit': 100,\n",
+       " 'Gill': 100,\n",
+       " 'Hardik': 55,\n",
+       " 'Yuvi': 40,\n",
+       " 'DSP': 100,\n",
+       " 'Shikar': 76}"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.setdefault(\"Shikar\",76)\n",
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "d32d15aa-7cce-43f8-a72d-4340c4336585",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Virat': 250, 'Gill': 100, 'Hardik': 55, 'Yuvi': 40, 'DSP': 100, 'Shikar': 76}"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.pop(\"rohit\")\n",
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "dad2d456-2155-4186-810e-f5c47e569bb1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Virat': 250, 'Gill': 100, 'Hardik': 55, 'Yuvi': 40, 'DSP': 100, 'Shikar': 76}"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores.get(\"rohit\")\n",
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "65324a43-c8ee-4605-88aa-83e1d660ed04",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'A': 20, 'B': 20, 'C': 20}"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1=[\"A\",\"B\",\"C\"]\n",
+    "mydict=dict.fromkeys(list1,20)\n",
+    "mydict"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "007ad6e9-5f40-4c14-bcff-d60a40166157",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
